@@ -11,36 +11,36 @@ import myslq from "../assets/images/mysql (1).png"
 
 const About = () => {
   return (
-    <section className="w-full px-4 sm:px-10 lg:px-[8%] py-10 bg-white">
-      <h4 className="text-center text-sm sm:text-base text-gray-600 mb-2">Introduction</h4>
-      <h2 className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-10">About Me</h2>
+    <section className="w-full  min-h-screen  px-4 sm:px-10  dark:bg-gray-900 lg:px-[8%] py-10 bg-white">
+      <h4 className="text-center text-sm sm:text-base text-gray-600 mb-2  dark:text-white">Introduction</h4>
+      <h2 className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-10  dark:text-white">About Me</h2>
 
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
         {/* Left Image */}
         <div className="relative mx-auto">
-          <img src={manwhite} alt="about" className="w-48 items-center sm:w-64 lg:w-80 lg:h-max rounded-2xl bg-gray-50" />
+          <img src={manwhite} alt="about" className="w-48 items-center sm:w-64 lg:w-80 lg:h-max rounded-md bg-gray-50" />
         </div>
 
         {/* Right Content */}
         <div className="flex-1">
-          <p className="text-gray-700 mb-10 max-w-2xl text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-700 mb-10 max-w-2xl text-sm sm:text-base leading-relaxed  dark:text-slate-300">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit eum rerum in aliquid nihil
             soluta laudantium, dignissimos ipsam eos aliquam commodi exercitationem velit quidem veritatis?
           </p>
 
           {/* Cards */}
           <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-2xl">
-            <li className="border border-gray-300  rounded-xl p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+            <li className="border border-gray-300  rounded-lg p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
               <HiOutlineCodeBracket className="text-2xl text-purple-600" />
-              <h3 className="my-2 font-semibold text-gray-800">Languages</h3>
-              <p className="text-gray-600 text-sm">HTML, CSS, Java, C, C++, PHP</p>
+              <h3 className="my-2 font-semibold text-gray-800  dark:text-white">Languages</h3>
+              <p className="text-gray-600 text-sm  dark:text-white">HTML, CSS, Java, C, C++, PHP</p>
             </li>
-            <li className="border border-gray-300 rounded-xl p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+            <li className="border border-gray-300 rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
               <RiGraduationCapLine className="text-2xl text-blue-600" />
               <h3 className="my-4 font-semibold text-gray-800">Education</h3>
               <p className="text-gray-600 text-sm">BSc in Computer Science</p>
             </li>
-            <li className="border border-gray-300 rounded-xl p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+            <li className="border border-gray-300 rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
               <RiProjectorLine className="text-2xl text-green-600" />
               <h3 className="my-4 font-semibold text-gray-800">Projects</h3>
               <p className="text-gray-600 text-sm">E-commerce, UI clones, dashboards</p>
@@ -53,10 +53,10 @@ const About = () => {
             {[react, vscode, figma, tailwind, git, myslq].map((img, idx) => (
               <li
                 key={idx}
-                className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-14 p-2 
-                border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-300"
+                className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-12 p-1.5
+                border border-gray-400 rounded-sm cursor-pointer hover:-translate-y-1 duration-300"
               >
-                <img src={img} alt="skill" className="w-full h-full object-contain" />
+                <img src={img} alt="skill" className="w-10 h-10 object-contain" />
               </li>
             ))}
           </ul>
