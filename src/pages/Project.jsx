@@ -4,6 +4,7 @@ import homeInterior from "../assets/images/homeInterior.png";
 import nft from "../assets/images/nft.png";
 import { FiGithub } from "react-icons/fi";
 import { MdLiveTv } from "react-icons/md";
+import { motion } from "framer-motion";
 
 // Dummy project data (replace with real data or props)
 const projects = [
@@ -15,73 +16,102 @@ const projects = [
   },
   {
     title: "E-Commerce App",
-    image: projectCoffe ,
+    image: projectCoffe,
     description: "Responsive shopping website with cart, search, and product pages.",
     link: "#",
   },
   {
     title: "Admin Dashboard",
-    image:  nft,
+    image: nft,
     description: "Interactive admin dashboard using React, Chart.js and Tailwind.",
     link: "#",
   },
-    {
+  {
     title: "Admin Dashboard",
-    image:  nft,
+    image: nft,
     description: "Interactive admin dashboard using React, Chart.js and Tailwind.",
     link: "#",
   },
-
 ];
 
 const Projects = () => {
   return (
-    <section className="w-full px-4 sm:px-10 lg:px-[%] py-16 bg-white  dark:bg-gray-900 ">
-      <h4 className="text-center text-sm sm:text-base text-gray-500 mb-2 dark:text-white">My Work</h4>
-      <h2 className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-12 dark:text-white">Projects</h2>
+    <section  
+      
+    className="w-full px-4 sm:px-10 lg:px-[%] py-16 bg-white dark:bg-[#11071F]">
+      <motion.h4
+         initial={{  y:-20,opacity: 0 }}
+          whileInView={{ y:0,opacity: 1 }}
+          transition={{ duration: 0.5,delay:0.5 }} className="text-center text-sm sm:text-base text-gray-500 mb-2 dark:text-white">
+        My Work
+      </motion.h4>
+      <motion.h2 
+       initial={{  y:-20,opacity: 0 }}
+          whileInView={{ y:0,opacity: 1 }}
+          transition={{ duration: 0.5,delay:0.3 }}
+      className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-12 dark:text-white">
+        Projects
+      </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:mx-20  ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:mx-20">
         {projects.map((project, index) => (
-          <div
+          <motion.div
+                initial={{opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6,delay:0.9 }}
+
+
             key={index}
-            className="bg-gray-50 rounded-md overflow-hidden shadow hover:shadow-lg transition-all duration-300"
+            className="rounded-xl overflow-hidden dark:bg-[#1d1836]
+            "
           >
+            {/* Image */}
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-50 object-cover rounded-t-md"
+              className="w-full h-48 object-cover rounded-t-xl"
             />
-            <div className="p-6  dark:bg-gray-800">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white ">{project.title}</h3>
-              <p className="text-gray-600 text-sm mb-4 dark:text-slate-300">{project.description}</p>
+
+            {/* Content */}
+            <div className="p-6 rounded-b-xl dark:bg-[#1d1836] bg:wh">
+              <h3 className="text-xl font-semibold dark:text-white  text-black mb-2">
+                {project.title}
+              </h3>
+
+              <p className="dark:text-slate-300 text-sm mb-4 text-gray-500">
+                {project.description}
+              </p>
+
+              {/* Tags */}
               <ul className="flex gap-3">
-                <li className="px-3 py-1 bg-gray-200 rounded-md dark:text-blue-500 ">html</li>
-                <li className="px-3 py-1  bg-gray-200 rounded-md">css</li>
-                <li className="px-3 py-1 bg-gray-200 rounded-md">js</li>
-                <li className="px-3 py-1  bg-gray-200 rounded-md">tailwind</li>
+                <li className="px-3 py-1 bg-gray-300 text-white dark:bg-white/10 dark:text-purple-300 rounded-sm">html</li>
+                <li className="px-3 py-1 bg-white/10 dark:text-purple-300 rounded-sm">css</li>
+                <li className="px-3 py-1 bg-white/10 dark:text-purple-300 rounded-sm">js</li>
+                <li className="px-3 py-1 bg-white/10 dark:text-purple-300 rounded-sm">tailwind</li>
               </ul>
-              <div className="flex gap-3 text-gray-600">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center mt-6 gap-3  hover:text-black"
-               
-              >
-               <FiGithub className="w-6 h-6  "/> Code
-              </a>
+
+              {/* Buttons */}
+              <div className="flex gap-5 text-slate-300">
                 <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center mt-5 gap-3 hover:text-black"
-               
-              >
-               < MdLiveTv  className="w-6 h-6 "/> Live demo
-              </a>
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-black/60 hover:text-black/100 mt-6 dark:text-gray-400 gap-2 dark:hover:text-white transition"
+                >
+                  <FiGithub className="w-6 h-6" /> Code
+                </a>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-black/60 hover:text-black/100  dark:text-gray-400 mt-6 gap-2 dark:hover:text-white transition"
+                >
+                  <MdLiveTv className="w-6 h-6 " /> Live Demo 
+                </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

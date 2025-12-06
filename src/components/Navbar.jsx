@@ -13,38 +13,33 @@ function Navbar() {
   };
 
   return (
-    <nav className=" navbar w-full fixed top-0 px-5 lg:px-[6%] xl:px-[10%] flex items-center justify-between z-50 bg-white shadow py-3  dark:bg-gray-800 text-black dark:text-white ">
+    <nav className=" navbar w-full fixed top-0 px-5 lg:px-[6%] xl:px-[10%] flex items-center justify-between z-50 bg-white shadow py-3  dark:bg-[#1A0B2E] text-black dark:text-white ">
       {/* Logo */}
       <label className="w-28 cursor-pointer text-xl font-bold">Logo</label>
 
       {/* Desktop Nav */}
       <ul className=" dark:text-white  dark:bg-gray-800 hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-2 bg-gray-50 bg-opacity-20 shadow-sm text-md">
         <Link to="/">
-          {" "}
           <li className="cursor-pointer hover:text-gray-500 transition">
             Home
           </li>
         </Link>
         <Link to="/About">
-          {" "}
           <li className="cursor-pointer hover:text-gray-500 transition">
             About
           </li>
         </Link>
-        <Link to="/Service">
-          {" "}
+        <Link to="/Experience">
           <li className="cursor-pointer hover:text-gray-500 transition">
-            Services
+            Experience
           </li>
         </Link>
         <Link to="/Project">
-          {" "}
           <li className="cursor-pointer hover:text-gray-500 transition">
             Projects
           </li>
         </Link>
         <Link to="/Contact">
-          {" "}
           <li className="cursor-pointer hover:text-gray-500 transition">
             Contact
           </li>
@@ -81,31 +76,32 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-[70px] left-0 w-full bg-white text-center py-6 flex flex-col gap-4 shadow-md md:hidden z-40 dark:bg-gray-800 dark:text-white  ">
+        <ul className="absolute top-[50px] left-0 w-full bg-white text-center py-6 flex flex-col gap-4 shadow-md md:hidden z-40 dark:bg-[#1d1836] dark:text-white  ">
           <Link to="">
-          <li className="cursor-pointer hover:text-gray-500 transition">
-            Home
-          </li>
+            <li className="cursor-pointer hover:text-gray-500 transition">
+              Home
+            </li>
           </Link>
           <Link to="/About">
-          <li className="cursor-pointer hover:text-gray-500 transition">
-            About
-          </li>
+            <li className="cursor-pointer hover:text-gray-500 transition">
+              About
+            </li>
           </Link>
-          <Link to="/Service">
-          <li className="cursor-pointer hover:text-gray-500 transition">
-            Services
-          </li>
+          <Link to="/Experience">
+            <li className="cursor-pointer hover:text-gray-500 transition">
+              Experience
+            </li>
           </Link>
+       
           <Link to="/Project">
-          <li className="cursor-pointer hover:text-gray-500 transition">
-            Projects
-          </li>
+            <li className="cursor-pointer hover:text-gray-500 transition">
+              Projects
+            </li>
           </Link>
           <Link to="/Contact">
-          <li className="cursor-pointer hover:text-gray-500 transition">
-            Contact
-          </li>
+            <li className="cursor-pointer hover:text-gray-500 transition">
+              Contact
+            </li>
           </Link>
           <button className="mx-auto px-6 py-1 border border-gray-500 rounded-full text-sm hover:bg-gray-100 transition">
             Resume

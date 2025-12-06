@@ -7,61 +7,130 @@ import figma from "../assets/images/figma (1).png";
 import vscode from "../assets/images/Visual Studio Code (VS Code).png";
 import tailwind from "../assets/images/Tailwind CSS.png";
 import react from "../assets/images/physics (2).png";
-import myslq from "../assets/images/mysql (1).png"
+import myslq from "../assets/images/mysql (1).png";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="w-full  min-h-screen  px-4 sm:px-10  dark:bg-gray-900 lg:px-[8%] py-10 bg-white">
-      <h4 className="text-center text-sm sm:text-base text-gray-600 mb-2  dark:text-white">Introduction</h4>
-      <h2 className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-10  dark:text-white">About Me</h2>
+    <section className="w-full  min-h-screen  px-4 sm:px-10  dark:bg-[#11071F] lg:px-[8%] py-10 bg-white">
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center text-sm sm:text-base text-gray-600 mb-2 mt-8 dark:text-white"
+      >
+        Introduction
+      </motion.h4>
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0 }}
+        className="text-center text-3xl sm:text-5xl font-bold text-gray-800 mb-6  dark:text-white"
+      >
+        About Me
+      </motion.h2>
 
-      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+      <motion
+     
+       className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
         {/* Left Image */}
-        <div className="relative mx-auto">
-          <img src={manwhite} alt="about" className="w-48 items-center sm:w-64 lg:w-80 lg:h-max rounded-md bg-gray-50" />
-        </div>
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative mx-auto"
+        >
+          <img
+            src={manwhite}
+            alt="about"
+            className="w-48 items-center sm:w-64 lg:w-80 lg:h-max rounded-md bg-gray-50"
+          />
+        </motion.div>
+
+        <div className="absolute z-[0]  w-[60%] h-[60%] -right-[50%] rounded-full top-0 bg-purple-300/30  blur-3xl lg:block hidden"></div>
+
+        <div className="absolute z-[0]  w-[60%] h-[60%] -left-[50%]  top-2/3 rounded-full  bg-purple-300/20  blur-3xl lg:block hidden "></div>
 
         {/* Right Content */}
         <div className="flex-1">
-          <p className="text-gray-700 mb-10 max-w-2xl text-sm sm:text-base leading-relaxed  dark:text-slate-300">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit eum rerum in aliquid nihil
-            soluta laudantium, dignissimos ipsam eos aliquam commodi exercitationem velit quidem veritatis?
-          </p>
+          <motion.p 
+          initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 , delay: 0.5}}
+          className="text-gray-700 mb-10 max-w-2xl text-sm sm:text-base leading-relaxed  dark:text-slate-300">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+            suscipit eum rerum in aliquid nihil soluta laudantium, dignissimos
+            ipsam eos aliquam commodi exercitationem velit quidem veritatis?
+          </motion.p>
 
           {/* Cards */}
-          <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-2xl">
-            <li className="border border-gray-300  rounded-lg p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-2xl "
+          >
+            <motion className="border hover:dark:border-[#D420BF] rounded-lg p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <HiOutlineCodeBracket className="text-2xl text-purple-600" />
-              <h3 className="my-2 font-semibold text-gray-800  dark:text-white">Languages</h3>
-              <p className="text-gray-600 text-sm  dark:text-white">HTML, CSS, Java, C, C++, PHP</p>
-            </li>
-            <li className="border border-gray-300 rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+              <h3 className="my-2 font-semibold text-gray-800  dark:text-white">
+                Languages
+              </h3>
+              <p className="text-gray-600 text-sm   dark:text-slate-300">
+                HTML, CSS, Java, C, C++, PHP
+              </p>
+            </motion>
+            <motion className="border hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <RiGraduationCapLine className="text-2xl text-blue-600" />
-              <h3 className="my-4 font-semibold text-gray-800">Education</h3>
-              <p className="text-gray-600 text-sm">BSc in Computer Science</p>
-            </li>
-            <li className="border border-gray-300 rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer">
+              <h3 className="my-4 font-semibold text-gray-800 dark:text-white ">
+                Education
+              </h3>
+              <p className="text-gray-600 text-sm dark:text-slate-300">
+                BSc in Computer Science
+              </p>
+            </motion>
+            <motion className="border hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <RiProjectorLine className="text-2xl text-green-600" />
-              <h3 className="my-4 font-semibold text-gray-800">Projects</h3>
-              <p className="text-gray-600 text-sm">E-commerce, UI clones, dashboards</p>
-            </li>
-          </ul>
+              <h3 className="my-4 font-semibold text-gray-800 dark:text-white ">
+                Projects
+              </h3>
+              <p className="text-gray-600 text-sm dark:text-slate-300">
+                E-commerce, UI clones, dashboards
+              </p>
+            </motion>
+          </motion.ul>
 
           {/* Skills */}
-          <h4 className="text-2xl sm:text-2xl mt-5 text-gray-700 font-bold">Skills</h4>
-          <ul className="flex flex-wrap items-center gap-4 sm:gap-6 mt-4">
+          <motion.h4
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-2xl sm:text-xl mt-5 text-gray-700  dark:text-white "
+          >
+            Tool I use
+          </motion.h4>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="flex flex-wrap items-center gap-4 sm:gap-6 mt-4"
+          >
             {[react, vscode, figma, tailwind, git, myslq].map((img, idx) => (
               <li
+                wli
                 key={idx}
                 className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-12 p-1.5
                 border border-gray-400 rounded-sm cursor-pointer hover:-translate-y-1 duration-300"
               >
-                <img src={img} alt="skill" className="w-10 h-10 object-contain" />
+                <img
+                  src={img}
+                  alt="skill"
+                  className="w-10 h-10 object-contain"
+                />
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
-      </div>
+      </motion>
     </section>
   );
 };
