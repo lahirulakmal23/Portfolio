@@ -6,10 +6,13 @@ import {
 
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-
 import { experiences } from "../constance/Constance";
+import useDarkMode from "../hooks/useDarkMode";
+
 
 const ExperienceCard = ({ exp }) => {
+  const [theme] = useDarkMode();
+const isDark = theme === "dark";
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}

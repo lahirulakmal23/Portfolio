@@ -58,7 +58,7 @@ const Projects = () => {
           <motion.div
                 initial={{opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6,delay:0.9 }}
+          transition={{ duration: 0.6,delay:0.5 }}
 
 
             key={index}
