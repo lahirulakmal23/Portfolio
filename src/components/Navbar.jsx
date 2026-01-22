@@ -18,7 +18,7 @@ function Navbar() {
       <label className="w-28 cursor-pointer text-xl font-bold">Logo</label>
 
       {/* Desktop Nav */}
-      <ul className=" dark:text-white  dark:bg-gray-800 hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-2 bg-gray-50 bg-opacity-20 shadow-sm text-md">
+      <ul className="border border-white dark:text-white  dark:bg-[#1A0B2E] hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-2 bg-gray-50 bg-opacity-20 shadow-sm text-md">
         <Link to="/">
           <li className="cursor-pointer hover:text-gray-500 transition">
             Home
@@ -103,7 +103,7 @@ function Navbar() {
               Contact
             </li>
           </Link>
-          <button className="mx-auto px-6 py-1 border border-gray-500 rounded-full text-sm hover:bg-gray-100 transition">
+          <button className="mx-auto px-6 py-1 border border-gray-500 dark:border-2 dark:border-white rounded-full text-sm hover:bg-gray-100 transition">
             Resume
           </button>
         </ul>

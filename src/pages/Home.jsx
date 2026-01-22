@@ -33,7 +33,7 @@ function Home() {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-xl  md:text-1xl  text-gray-800 mb-3 dark:text-white font-Ovo"
+          className="text-xl  md:text-1xl  text-gray-800 mb-3 dark:text-white  font-fa"
         >
           Hi , I'm Lahiru Lakmal
         </motion.h3>
