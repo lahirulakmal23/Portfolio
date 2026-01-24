@@ -8,6 +8,12 @@ import vscode from "../assets/images/Visual Studio Code (VS Code).png";
 import tailwind from "../assets/images/Tailwind CSS.png";
 import react from "../assets/images/physics (2).png";
 import myslq from "../assets/images/mysql (1).png";
+import github from "../assets/images/github-icon.png";
+import next from "../assets/images/next1.png";
+import node from "../assets/images/Node.js.png";
+import jwt from "../assets/images/jwt-new.png";
+import mongo from "../assets/images/MongoDB.png";
+import docker from "../assets/images/Docker.png";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -58,9 +64,7 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 , delay: 0.5}}
           className="text-gray-700 mb-10 max-w-2xl text-sm sm:text-base leading-relaxed  dark:text-slate-300">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            suscipit eum rerum in aliquid nihil soluta laudantium, dignissimos
-            ipsam eos aliquam commodi exercitationem velit quidem veritatis?
+            I am currently a 3rd-year undergraduate specializing in Software Engineering at Sri Lanka Institute of Information Technology (SLIIT). I have successfully completed industry-grade web projects using MERN stack full-stack development. I am passionate about building scalable web applications, learning modern technologies, and solving real-world problems through software.
           </motion.p>
 
           {/* Cards */}
@@ -104,9 +108,9 @@ const About = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-2xl sm:text-xl mt-5 text-gray-700  dark:text-white "
+            className="text-2xl sm:text-2xl mt-5 text-gray-700  dark:text-white font-bold "
           >
-            Tool I use
+           My Skills
           </motion.h4>
           <motion.ul
             initial={{ opacity: 0 }}
@@ -114,11 +118,12 @@ const About = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex flex-wrap items-center gap-4 sm:gap-6 mt-4"
           >
-            {[react, vscode, figma, tailwind, git, myslq].map((img, idx) => (
+           
+            {[ next,react, vscode, figma, tailwind, git,github,node,jwt, myslq, mongo, docker].map((img, idx) => (
               <li
                 wli
                 key={idx}
-                className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-12 p-1.5
+                className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-12 sm:w-12 p-1
                 border border-gray-400 rounded-sm cursor-pointer hover:-translate-y-1 duration-300"
               >
                 <img
@@ -129,6 +134,7 @@ const About = () => {
               </li>
             ))}
           </motion.ul>
+    
         </div>
       </motion>
     </section>
