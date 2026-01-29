@@ -13,7 +13,7 @@ function Home() {
   return (
     <section
       id="hero"
-      className=" w-full min-h-screen  dark:bg-[#11071F]  dark:text-white font-Outfit flex items-center justify-center bg-white  lg:mt-12 "
+      className=" w-full min-h-screen  dark:bg-[#11071F]  dark:text-white font-Outfit flex items-center justify-center bg-white  lg:mt-12bg-red-50"
     >
       <div className="text-center max-w-xl ">
         {/* Profile Image */}
@@ -21,7 +21,7 @@ function Home() {
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8, type: "Spring", stiffness: 1000 }}
-          className="w-42 h-42  mx-auto rounded-full mb-6 dark:bg-[radial-gradient(circle,_#8b3cff_0%,_#0a0015_100%)]  "
+          className="w-42 h-42  mx-auto rounded-full mb-6 dark:bg-[radial-gradient(circle,_#8b3cff_0%,_#0a0015_100%)] bg-[radial-gradient(circle,_#8b3cff_0%,_#0a0015_100%)] "
         >
           <div>
             <img src={profile} alt="Profile" className="w-36  mx-auto mb-6 " />

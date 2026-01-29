@@ -3,6 +3,8 @@ import { LuSunMoon } from "react-icons/lu";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import useDarkMode from "../hooks/useDarkMode";
+import { FiSun, FiMoon } from "react-icons/fi";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,11 +52,11 @@ function Navbar() {
       <div className="flex items-center gap-8">
         {/* Theme Icon */}
         <button onClick={trogletheme} className="text-2xl cursor-pointer">
-          {theme === "light" ? "🌙" : "☀️"}
+          {theme === "light" ? <FiMoon className=" hover:text-yellow-300" /> : <FiSun className="text-yellow-400 hover:text-indigo-500" />}
         </button>
 
         {/* Resume Button (Desktop Only) */}
-        <button className="hidden lg:flex items-center gap-3 px-5 py-1.5 border border-gray-500 rounded-full text-sm hover:bg-gray-100 transition">
+        <button className="hidden lg:flex items-center gap-3 px-5 py-1.5 border border border-black rounded-full text-sm hover:bg-gray-100 transition bg:dark dark:border-white hover:dark:bg-gray-700">
           Resume
         </button>
 
@@ -75,39 +77,49 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <ul className="absolute top-[50px] left-0 w-full bg-white text-center py-6 flex flex-col gap-4 shadow-md md:hidden z-40 dark:bg-[#1d1836] dark:text-white  ">
-          <Link to="">
-            <li className="cursor-pointer hover:text-gray-500 transition">
-              Home
-            </li>
-          </Link>
-          <Link to="/About">
-            <li className="cursor-pointer hover:text-gray-500 transition">
-              About
-            </li>
-          </Link>
-          <Link to="/Experience">
-            <li className="cursor-pointer hover:text-gray-500 transition">
-              Experience
-            </li>
-          </Link>
-       
-          <Link to="/Project">
-            <li className="cursor-pointer hover:text-gray-500 transition">
-              Projects
-            </li>
-          </Link>
-          <Link to="/Contact">
-            <li className="cursor-pointer hover:text-gray-500 transition">
-              Contact
-            </li>
-          </Link>
-          <button className="mx-auto px-6 py-1 border border-gray-500 dark:border-2 dark:border-white rounded-full text-sm hover:bg-gray-100 transition">
-            Resume
-          </button>
-        </ul>
-      )}
+    {isOpen && (
+  <ul className="absolute top-[50px] left-0 w-full bg-white text-center py-6 flex flex-col gap-4 shadow-md md:hidden z-40 dark:bg-[#1d1836] dark:text-white">
+    
+    <Link to="/" onClick={() => setIsOpen(false)}>
+      <li className="cursor-pointer hover:text-gray-500 transition">
+        Home
+      </li>
+    </Link>
+
+    <Link to="/About" onClick={() => setIsOpen(false)}>
+      <li className="cursor-pointer hover:text-gray-500 transition">
+        About
+      </li>
+    </Link>
+
+    <Link to="/Experience" onClick={() => setIsOpen(false)}>
+      <li className="cursor-pointer hover:text-gray-500 transition">
+        Experience
+      </li>
+    </Link>
+
+    <Link to="/Project" onClick={() => setIsOpen(false)}>
+      <li className="cursor-pointer hover:text-gray-500 transition">
+        Projects
+      </li>
+    </Link>
+
+    <Link to="/Contact" onClick={() => setIsOpen(false)}>
+      <li className="cursor-pointer hover:text-gray-500 transition">
+        Contact
+      </li>
+    </Link>
+
+    <button
+      onClick={() => setIsOpen(false)}
+      className="mx-auto px-6 py-1 border border-gray-500 dark:border-2 dark:border-white rounded-full text-sm hover:bg-gray-100 transition"
+    >
+      Resume
+    </button>
+
+  </ul>
+)}
+
     </nav>
   );
 }

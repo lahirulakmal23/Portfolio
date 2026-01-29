@@ -53,7 +53,7 @@ const About = () => {
           />
         </motion.div>
 
-        <div className="absolute z-[0]  w-[60%] h-[60%] -right-[50%] rounded-full top-0 bg-purple-300/30  blur-3xl lg:block hidden"></div>
+        <div className=" bg:dark absolute z-[0]  w-[60%] h-[60%] -right-[50%] rounded-full top-0 bg-purple-300/30  blur-3xl lg:block hidden"></div>
 
         <div className="absolute z-[0]  w-[60%] h-[60%] -left-[50%]  top-2/3 rounded-full  bg-purple-300/20  blur-3xl lg:block hidden "></div>
 
@@ -72,9 +72,9 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-2xl "
+            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 max-w-2xl  border-gray-400"
           >
-            <motion className="border hover:dark:border-[#D420BF] rounded-lg p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
+            <motion className="border hover:dark:border-[#D420BF] border-gray-400 rounded-lg p-4 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <HiOutlineCodeBracket className="text-2xl text-purple-600" />
               <h3 className="my-2 font-semibold text-gray-800  dark:text-white">
                 Languages
@@ -83,7 +83,7 @@ const About = () => {
                 HTML, CSS, Java, C, C++, PHP
               </p>
             </motion>
-            <motion className="border hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
+            <motion className="border border-gray-400 hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <RiGraduationCapLine className="text-2xl text-blue-600" />
               <h3 className="my-4 font-semibold text-gray-800 dark:text-white ">
                 Education
@@ -92,7 +92,7 @@ const About = () => {
                 BSc in Computer Science
               </p>
             </motion>
-            <motion className="border hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
+            <motion className="border border-gray-400 hover:dark:border-[#D420BF]  rounded-lg p-6 hover:-translate-y-1 duration-300 hover:shadow-md cursor-pointer dark:bg-[#1d1836]">
               <RiProjectorLine className="text-2xl text-green-600" />
               <h3 className="my-4 font-semibold text-gray-800 dark:text-white ">
                 Projects
@@ -104,6 +104,7 @@ const About = () => {
           </motion.ul>
 
           {/* Skills */}
+          
           <motion.h4
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -134,7 +135,7 @@ const About = () => {
               </li>
             ))}
           </motion.ul>
-    
+          
         </div>
       </motion>
     </section>

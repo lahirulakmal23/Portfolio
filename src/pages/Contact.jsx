@@ -59,7 +59,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 1}}
      className="  p-6 rounded-lg shadow-md dark:bg-[#1d1836]">
     <h3 className="text-2xl font-semibold text-gray-800 mb-4 dark:text-white ">Let's talk</h3>
-    <p className="text-gray-600 mb-4 text-sm leading-relaxed dark:text-white">
+    <p className="text-gray-600 mb-4 text-sm leading-relaxed dark:text-slate-300">
       Feel free to reach out to me about collaborations, projects, or just to say hi!
     </p>
 
@@ -106,7 +106,7 @@ const Contact = () => {
               name="name"
               placeholder="Enter your name"
               required
-              className="p-3 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6  dark:bg-[#1d1836] dark:text-purple-300"
+              className="p-3 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6  dark:bg-[#1d1836] dark:text-slate-300"
             />
             <motion.input
                 initial={{ x: 50, opacity: 0 }}
@@ -116,7 +116,7 @@ const Contact = () => {
               name="email"
               placeholder="Enter your email"
               required
-              className="p-3 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6 dark:bg-[#1d1836] dark:text-purple-300"
+              className="p-3 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6 dark:bg-[#1d1836] dark:text-slate-300"
             />
           </div>
 
@@ -128,7 +128,7 @@ const Contact = () => {
             rows={6}
             placeholder="Enter your message"
             required
-            className="w-full p-4 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6 dark:bg-[#1d1836] dark:text-purple-300"
+            className="w-full p-4 border border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-purple-400 bg-white mb-6 dark:bg-[#1d1836] dark:text-slate-300"
           ></motion.textarea>
 
           <motion.button

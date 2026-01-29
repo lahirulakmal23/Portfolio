@@ -11,7 +11,7 @@ const Projects = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-sm sm:text-base text-gray-500 mb-2 dark:text-white"
+        className="text-center text-sm sm:text-base text-gray-500 mb-2 dark:text-white mt-8"
       >
         My Work
       </motion.h4>
@@ -25,24 +25,24 @@ const Projects = () => {
         Projects
       </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:mx-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 lg:mx-20 ">
         {projects.map((project) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="rounded-xl overflow-hidden dark:bg-[#1d1836]"
+            className="rounded-xl overflow-hidden dark:bg-[#1d1836]  "
           >
             {/* Image */}
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-t-xl"
+              className="w-full h-60 object-cover rounded-t-xl "
             />
 
             {/* Content */}
-            <div className="p-6 rounded-b-xl dark:bg-[#1d1836] bg:wh">
+            <div className="p-6 rounded-b-xl dark:bg-[#1d1836] ">
               <h3 className="text-xl font-semibold dark:text-white text-black mb-2">
                 {project.title}
               </h3>
@@ -56,7 +56,7 @@ const Projects = () => {
                 {project.technologies.map((tech, index) => (
                   <li
                     key={index}
-                    className="px-3 py-1 bg-white/10 dark:text-purple-300 rounded-sm"
+                    className="px-3 py-1 bg-gray-200 dark:text-purple-300 rounded-sm dark:bg-gray-700 "
                   >
                     {tech}
                   </li>
